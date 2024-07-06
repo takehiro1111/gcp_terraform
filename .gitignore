@@ -2,4 +2,7 @@
 *.tfstate.*
 modules/variable/billing_id.tf
 modules/variable/iam_member.tf
+<<<<<<< HEAD
 errored.tfstate
+=======
+>>>>>>> 5ac4338ecd258f7d79385aab44a4eda29ca808aa
