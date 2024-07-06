@@ -15,9 +15,8 @@ terraform {
 # State
 ###########################################################
 terraform {
-  backend "local" {
-    path = "tfstate/local-state"
-    bucket = ""
+  backend "gcs" {
+    bucket = "terraform-state-silent-region-412712"
     prefix = "state"
   }
 }
@@ -25,10 +24,11 @@ terraform {
 # Project
 ###########################################################
 # Organizationsも作成予定
-resource "google_project" "my_project" {
-  name       = "My Project"
-  project_id = "your-project-id"
-  org_id     = "1234567"
+resource "google_project" "silent_region_412712" {
+  name       = "My First Project"
+  project_id = data.google_client_config.self.project
+  billing_account = data.google_billing_account.my_billing_account.id
+  # org_id     = "1234567"
 }
 
 ###########################################################
@@ -44,4 +44,13 @@ provider "google" {
 ###########################################################
 module "value" {
   source = "../modules/variable/"
+}
+
+###########################################################
+# Data Block
+###########################################################
+data "google_client_config" "self" {}
+
+data "google_billing_account" "my_billing_account" {
+  billing_account = "billingAccounts/${module.value.billing_id_my_first_project}"
 }

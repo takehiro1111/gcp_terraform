@@ -3,7 +3,7 @@
 ############################################
 # state -----------------------------------
 resource "google_storage_bucket" "tf_state" {
-  name          = "silent-region-412712-744558415342"
+  name          = "terraform-state-${data.google_client_config.self.project}"
   location      = "asia-northeast1"
   force_destroy = true
   storage_class = "STANDARD"
