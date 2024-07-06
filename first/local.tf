@@ -1,5 +1,5 @@
 /* 
- * Manage IAM Members with Terraform Code
+ * User and Roles Mapping
  */
 locals {
   user_info = {
@@ -7,6 +7,9 @@ locals {
   }
 }
 
+/* 
+ * Manage IAM Members with Terraform Code
+ */
 locals {
   keys = distinct(flatten([
     for user, roles in local.user_info: [
