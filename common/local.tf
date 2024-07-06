@@ -10,6 +10,7 @@ locals {
 /* 
  * Manage IAM Members with Terraform Code
  */
+// ref:https://github.com/terraform-google-modules/terraform-google-iam/blob/v7.7.1/modules/helper/main.tf
 locals {
   keys = distinct(flatten([
     for user, roles in local.user_info: [

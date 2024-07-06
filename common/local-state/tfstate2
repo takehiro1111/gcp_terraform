@@ -1,0 +1,145 @@
+{
+  "version": 4,
+  "terraform_version": "1.9.0",
+  "serial": 14,
+  "lineage": "b48636fd-e6f7-7194-ca1c-63c9833a7ecc",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "google_client_config",
+      "name": "self",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_token": "ya29.a0AXooCgvOC5Y9IoU-RNbcQDGclz6J2Gcx8iar9EtQyxrSfvUB2fY80wpRtRK-vxwFmt6dXt2EMMZUqusQ2K_Bm0NQbxjCCF3UlB-7gQi6lmsUwwwBebFCyCQN0-31_pPoZWjsB-4-23aUEaGdMijAnXVKFgMtgsdwwwmAnwaCgYKAScSARMSFQHGX2MiLiEjaowx2o0sIEuZD7PFNw0173",
+            "id": "projects/\"silent-region-412712\"/regions/\"asia-northeast1\"/zones/\u003cnull\u003e",
+            "project": "silent-region-412712",
+            "region": "asia-northeast1",
+            "zone": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "access_token"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_project",
+      "name": "common",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "auto_create_network": true,
+            "billing_account": "01A310-0B761D-B232EB",
+            "effective_labels": {},
+            "folder_id": null,
+            "id": "projects/silent-region-412712",
+            "labels": {},
+            "name": "common",
+            "number": "744558415342",
+            "org_id": null,
+            "project_id": "silent-region-412712",
+            "skip_delete": null,
+            "terraform_labels": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJyZWFkIjo2MDAwMDAwMDAwMDAsInVwZGF0ZSI6NjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "data.google_client_config.self"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_project_iam_member",
+      "name": "roles_members",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "index_key": "t.soccer.0916@gmail.com_owner",
+          "schema_version": 0,
+          "attributes": {
+            "condition": [],
+            "etag": "BwYclXger4Q=",
+            "id": "silent-region-412712/roles/owner/user:t.soccer.0916@gmail.com",
+            "member": "user:t.soccer.0916@gmail.com",
+            "project": "silent-region-412712",
+            "role": "roles/owner"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.google_client_config.self"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_storage_bucket",
+      "name": "tf_state",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "autoclass": [],
+            "cors": [],
+            "custom_placement_config": [],
+            "default_event_based_hold": false,
+            "effective_labels": {},
+            "enable_object_retention": false,
+            "encryption": [],
+            "force_destroy": true,
+            "id": "terraform-state-common-744558415342",
+            "labels": null,
+            "lifecycle_rule": [],
+            "location": "ASIA-NORTHEAST1",
+            "logging": [],
+            "name": "terraform-state-common-744558415342",
+            "project": "silent-region-412712",
+            "project_number": 744558415342,
+            "public_access_prevention": "enforced",
+            "requester_pays": false,
+            "retention_policy": [],
+            "rpo": null,
+            "self_link": "https://www.googleapis.com/storage/v1/b/terraform-state-common-744558415342",
+            "soft_delete_policy": [
+              {
+                "effective_time": "2024-07-06T15:06:35.329Z",
+                "retention_duration_seconds": 604800
+              }
+            ],
+            "storage_class": "STANDARD",
+            "terraform_labels": {},
+            "timeouts": null,
+            "uniform_bucket_level_access": true,
+            "url": "gs://terraform-state-common-744558415342",
+            "versioning": [],
+            "website": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsInJlYWQiOjI0MDAwMDAwMDAwMCwidXBkYXRlIjoyNDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "data.google_client_config.self",
+            "google_project.common"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
