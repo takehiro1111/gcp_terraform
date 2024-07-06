@@ -3,6 +3,7 @@
 gcloud auth application-default login
 ```
 
+### コマンドの短縮
 ```zsh
 vi ~/.zshrc
 alias gcloud auth login='gcloud auth application-default login'
