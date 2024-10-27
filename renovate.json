@@ -16,7 +16,7 @@
     "takehiro1111"
   ],
   "autoApprove": true,
-  "automerge":true,
+  "automerge": true,
   "automergeType":"pr",
   "automergeStrategy":"auto",
   "rebaseWhen": "conflicted",
