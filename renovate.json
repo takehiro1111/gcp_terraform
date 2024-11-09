@@ -11,16 +11,16 @@
   "schedule": [
     "* 8-23,0-2 * * *"
   ],
-  "assignAutomerge": true,
-  "assignees": [
-    "takehiro1111"
-  ],
+  "assignAutomerge": false,
   "autoApprove": true,
   "automerge": true,
-  "automergeType":"pr",
-  "automergeStrategy":"auto",
-  "rebaseWhen": "conflicted",
+  "automergeType": "pr",
+  "automergeStrategy": "auto",
+  "rebaseWhen": "auto",
   "dependencyDashboard": true,
+  "ignoreTests": true,
+  "ignoreReviewers": ["takehiro1111"],
+  "reviewers": ["Renovate Approve[bot]","Renovate Approve 2[bot]"],
   "packageRules": [
     {
       "matchManagers": ["terraform", "terraform-version", "tflint-plugin"],
