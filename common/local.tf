@@ -3,7 +3,12 @@
  */
 locals {
   user_info = {
-    "${module.value.user.root}" = ["owner"]
+    "${module.value.user.root}" = [
+      "owner",
+      "container.admin",
+      "compute.networkAdmin",
+      "iam.serviceAccountUser",
+    ]
   }
 }
 
