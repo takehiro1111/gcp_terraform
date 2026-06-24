@@ -8,7 +8,7 @@ terraform {
       version = "7.38.0"
     }
   }
-  required_version = "1.15.6"
+  required_version = "1.15.7"
 }
 
 ###########################################################
